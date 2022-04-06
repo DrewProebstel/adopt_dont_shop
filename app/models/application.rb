@@ -1,11 +1,11 @@
 class Application < ApplicationRecord
-  validates :name, presence: false
-  validates :street_address, presence: false
-  validates :city, presence: false
-  validates :state, presence: false
-  validates :zip_code, presence: false
+  validates :name, presence: true
+  validates :street_address, presence: true
+  validates :city, presence: true
+  validates :state, presence: true
+  validates :zip_code, presence: true
   validates :description, presence: false
-  validates :status, presence: false
+  validates :status, presence: true
 
   has_many :application_pets
   has_many :pets, through: :application_pets
